@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trailers de Películas</title>
+<style>
+html,body{
+margin:0;
+padding:0;
+background:#000;
+height:100%;
+overflow:hidden;
+}
+#player{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+#logo{
+position:absolute;
+top:15px;
+left:15px;
+color:white;
+font-size:28px;
+font-family:Arial;
+z-index:10;
+}
+</style>
+</head>
+<body>
+
+<div id="logo">🎬 Trailers de Películas</div>
+<div id="player"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+function onYouTubeIframeAPIReady() {
+new YT.Player('player', {
+playerVars: {
+autoplay:1,
+mute:1,
+controls:0,
+rel:0,
+modestbranding:1,
+listType:'playlist',
+list:'PLQ2CxunRxmWGFp0uoallxzOvCmqHq7Afx'
+}
+});
+}
+</script>
+
+</body>
+</html>
